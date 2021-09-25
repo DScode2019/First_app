@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.firstFrameController">
+<center>
+    <AnchorPane BorderPane.alignment="CENTER">
+        <children>
+            <Pane layoutY="55.0" prefHeight="85.0" prefWidth="485.0">
+                <children>
+                    <Label layoutX="20.0" layoutY="24.0" prefHeight="37.0" prefWidth="141.0" text="First Frame">
+                        <font>
+                            <Font size="25.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="313.0" layoutY="34.0" prefHeight="17.0" prefWidth="74.0" text="Table Rows:" />
+                    <Label layoutX="387.0" layoutY="34.0" text="0" />
+                </children>
+            </Pane>
+            <GridPane layoutX="16.0" layoutY="133.0" maxHeight="1.7976931348623157E308" prefHeight="344.0" prefWidth="468.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="133.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="500000.0" minWidth="10.0" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="303.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <children>
+                    <TableView prefHeight="281.0" prefWidth="464.0" GridPane.rowIndex="1">
+                        <columns>
+                            <TableColumn maxWidth="50000.0" prefWidth="75.0" text="Last Name" />
+                            <TableColumn prefWidth="75.0" text="First Name" />
+                        </columns>
+                    </TableView>
+                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                        <children>
+                            <TextField promptText="Search" />
+                            <ComboBox prefWidth="150.0" promptText="Selection" />
+                            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Add Record" onAction="#addRecord"/>
+                        </children>
+                    </HBox>
+                </children>
+            </GridPane>
+        </children>
+    </AnchorPane>
+</center>
+</BorderPane>
